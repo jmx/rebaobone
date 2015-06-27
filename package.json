@@ -1,0 +1,30 @@
+{
+  "name": "rebaobone",
+  "version": "0.0.1",
+  "description": "React, Baobab and Backbone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Macpherson",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "salespreso-gulp": "^2.0.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src"
+    },
+    "dependencies": {
+      "baobab": "npm:baobab@^1.1.1",
+      "baobab-react": "npm:baobab-react@^0.1.1",
+      "react": "npm:react@^0.14.0-alpha3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.1.13",
+      "babel-runtime": "npm:babel-runtime@^5.1.13",
+      "core-js": "npm:core-js@^0.9.4"
+    }
+  }
+}
