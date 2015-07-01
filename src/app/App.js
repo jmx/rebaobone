@@ -1,13 +1,13 @@
 import React from "react";
 import tree from "./tree";
-import Suburb from "../components/Suburb";
+import SuburbList from "../components/SuburbList";
 import {root} from 'baobab-react/higher-order';
 
 let Application = React.createClass({
   render() {
     return (
       <div>
-        <Suburb />
+        <SuburbList />
       </div>
     );
   }

@@ -20,16 +20,16 @@ let suburbs = {
 };
 
 let tree = new Baobab({
-	suburbs: {
-		"0": {
+	suburbs: [
+		{
 			name: "Coburg",
 			postcode: 3080
 		},
-		"1": {
+		{
 			name: "Pascoe Vale",
 			postcode: 3044
 		}
-	},
+	],
 	selectedSuburbId: "0"
 }, {
 	facets: {

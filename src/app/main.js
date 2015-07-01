@@ -9,16 +9,28 @@ import suburbActions from "suburbs/actions";
 
 
 var suburbs = new SuburbCollection();
-suburbs.fetch({url: "http://localhost:3000/suburbs/"});
+var page = 1;
 
-suburbs.on("sync", function (data) {
-	var suburbList = [];
-	_.each(data.models, function (suburb) {
-		suburbList.push(suburb.toJSON());
+function doFetch() {
+	suburbs.fetch({
+		url: "http://localhost:3000/suburbs/",
+		data: {
+			page: page
+		}
 	});
-	suburbActions.setSuburbs(suburbList);
-});
 
+	suburbs.on("sync", function (data) {
+		var suburbList = [];
+		_.each(data.models, function (suburb) {
+			suburbList.push(suburb.toJSON());
+		});
+		suburbActions.setSuburbs(suburbList);
+	});
+}
 
+setInterval( function () {
+	page++;
+	doFetch()
+}, 1500);
 
 React.render(<Application />, document.getElementById("demo"));
