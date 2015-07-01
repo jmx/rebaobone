@@ -9,6 +9,8 @@
   "author": "James Macpherson",
   "license": "ISC",
   "devDependencies": {
+    "body-parser": "^1.13.1",
+    "express": "^4.13.0",
     "gulp": "^3.9.0",
     "salespreso-gulp": "^2.0.0"
   },
@@ -17,8 +19,11 @@
       "baseURL": "src"
     },
     "dependencies": {
+      "backbone": "npm:backbone@^1.2.1",
       "baobab": "npm:baobab@^1.1.1",
       "baobab-react": "npm:baobab-react@^0.1.1",
+      "jquery": "npm:jquery@^2.1.4",
+      "lodash": "npm:lodash@^3.10.0",
       "react": "npm:react@^0.14.0-alpha3"
     },
     "devDependencies": {

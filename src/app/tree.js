@@ -10,6 +10,15 @@ let selectedSuburb = {
 	}
 }
 
+let suburbs = {
+	cursors: {
+		suburbs: ["suburbs"]
+	},
+	get: function (state) {
+		return state.suburbs;
+	}
+};
+
 let tree = new Baobab({
 	suburbs: {
 		"0": {
@@ -24,7 +33,8 @@ let tree = new Baobab({
 	selectedSuburbId: "0"
 }, {
 	facets: {
-		selectedSuburb: selectedSuburb
+		selectedSuburb: selectedSuburb,
+		suburbs: suburbs
 	}
 });
 
